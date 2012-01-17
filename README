@@ -1,0 +1,58 @@
+package Pets;
+
+public interface Pet {
+	
+	void talk();
+	void eat();
+	int getLegCount();
+}
+public class Dog implements Pet {
+
+
+	@Override
+	public void talk() {
+		System.out.println("I am talking");
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("I am eating");
+	}
+
+	@Override
+	public int getLegCount() {
+		return 4;
+		
+		
+	}
+
+}
+public class Cat implements Pet {
+
+	@Override
+	public void talk() {
+		System.out.println("I am talking");
+
+	}
+
+	@Override
+	public void eat() {
+		System.out.println("I am eating");
+	}
+
+	@Override
+	public int getLegCount() {
+		return 4;
+		
+		
+	}
+
+}
+public class TestPet {
+	public static void main(String[] args) {
+		Pet pet=new Dog();
+		pet.talk();
+		pet.eat();
+		System.out.println("Dog pet has " + pet.getLegCount() + " legs");
+	}
+}
